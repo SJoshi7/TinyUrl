@@ -11,8 +11,13 @@
                 LongUrl: $('#login').val(),
                 CustomValue: $('#password').val()
             },
-            success: function (data, textstatus,xhr) {
-                alert("Your short URL is \nhttps://ait-oss.azurewebsites.net/" + data);
+            success: function (data, textstatus, xhr) {
+                let copyFrom = document.createElement("textarea");
+                document.body.appendChild(copyFrom);
+                copyFrom.textContent = "https://ait-oss.azurewebsites.net/"+ data;
+                copyFrom.select();
+                document.execCommand("copy");
+                alert("short URL copied\nhttps://ait-oss.azurewebsites.net/" + data);
             }
         });
     }
