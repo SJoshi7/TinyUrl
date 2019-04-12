@@ -17,7 +17,7 @@
                 copyFrom.textContent = "https://ait-oss.azurewebsites.net/"+ data;
                 copyFrom.select();
                 document.execCommand("copy");
-                alert("short URL copied\nhttps://ait-oss.azurewebsites.net/" + data);
+                alert("short URL is copied to clipboard\nhttps://ait-oss.azurewebsites.net/" + data);
             }
         });
     }
@@ -28,10 +28,10 @@
         <div class="fadeIn first">
             <img src="~/Models/faviconoss.PNG" id="icon" alt="User Icon" />
         </div>
-        <form id="myForm">
+        <form id="myForm"   onsubmit="show_alert(); return false">
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="Url to be shortened" required>
             <input type="text" id="password" class="fadeIn third" name="login" placeholder="Custom value">
-            <input type="button" id="submitit" class="fadeIn fourth" value="Make it short Nigga!"  onclick="show_alert();" >
+            <input type="submit" id="submitit" class="fadeIn fourth" value="Make it short Nigga!"  >
         </form>
     </div>
 </div>
