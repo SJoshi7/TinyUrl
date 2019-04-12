@@ -28,7 +28,7 @@ namespace TinyUrl.Controllers
            
             if (LongUrl == "")
             {
-                return Redirect("https://ait-oss.azurewebsites.net/");
+                return Redirect("https://ait-oss.azurewebsites.net/home/error");
             }
             System.Uri uri = new System.Uri(LongUrl);
            return Redirect(uri);

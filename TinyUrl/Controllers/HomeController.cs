@@ -14,5 +14,11 @@ namespace TinyUrl.Controllers
 
             return View();
         }
+        public ActionResult Error()
+        {
+            ViewBag.Title = "Error Page";
+
+            return View();
+        }
     }
 }
